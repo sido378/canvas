@@ -182,9 +182,6 @@ pub mod ffi {
     pub width: f32,
     pub font_ascent: f32,
     pub font_descent: f32,
-    pub alphabetic_baseline: f32,
-    pub em_height_ascent: f32,
-    pub em_height_descent: f32,
   }
 
   #[repr(C)]

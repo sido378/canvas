@@ -67,26 +67,8 @@ test('text-baseline', async (t) => {
   const { ctx } = t.context
   ctx.font = '48px Iosevka Slab'
   ctx.textBaseline = 'bottom'
-  ctx.fillText('abcdef', 50, 100)
-  ctx.fillText('abcdefg', 50, 100)
-  await snapshotImage(t)
-})
-
-test('text-baseline-all', async (t) => {
-  const { ctx } = t.context
-  const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'] as const
-  ctx.font = '36px Iosevka Slab'
-  ctx.strokeStyle = 'red'
-
-  baselines.forEach((baseline, index) => {
-    ctx.textBaseline = baseline
-    const y = 75 + index * 75
-    ctx.beginPath()
-    ctx.moveTo(0, y + 0.5)
-    ctx.lineTo(550, y + 0.5)
-    ctx.stroke()
-    ctx.fillText(`Abcdefghijklmnop (${baseline})`, 0, y)
-  })
+  ctx.fillText('abcdef', 50, 50)
+  ctx.fillText('abcdefg', 50, 50)
   await snapshotImage(t)
 })
 
